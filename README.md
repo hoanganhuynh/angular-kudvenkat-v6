@@ -1,3 +1,4 @@
+
 # AngularKudvenatV6
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
@@ -32,4 +33,7 @@ To create a new project
 
 To give it root permission
 >sudo chown -R user_name directory_name
+
+=======
+# angular-kudvenkat-v6
 
