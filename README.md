@@ -28,12 +28,21 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 
-To create a new project
+## To create a new project
 >ng new project_name
 
-To give it root permission
+## To give it root permission
 >sudo chown -R user_name directory_name
 
-=======
-# angular-kudvenkat-v6
+## To check the version
+> ng v
+
+## To serve the project
+>ng serve --port=port_number
+
+>ng s -o
+
+## Install bootstrap and jquery
+>npm install bootstrap@3 jquery --save
+
 
