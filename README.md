@@ -46,3 +46,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 >npm install bootstrap@3 jquery --save
 
 
+##To create a component
+>ng g c folder_name/component_name --spec=false --flat=true
+
+## To create a module
+>ng g m app-routing --flat=true --module=app
+
+
+
