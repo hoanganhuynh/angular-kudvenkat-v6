@@ -16,6 +16,12 @@ export class CreateEmployeeComponent implements OnInit {
   ngOnInit() {
     this.employeeForm = new FormGroup({
       name:new FormControl(),
+      email:new FormControl(),
+      skills: new FormGroup({
+      skillName: new FormControl(),
+      experienceInYears: new FormControl(),
+      proficiency: new FormControl()
+      })
      
     });
   }
@@ -23,11 +29,14 @@ export class CreateEmployeeComponent implements OnInit {
   onSubmit(): void{
     console.log(this.employeeForm.value);
     console.log(this.employeeForm)
-    this.httpClient.post(`http://127.0.0.1:8000/api_new/portal_category/`,
-    this.employeeForm.value).subscribe(
-      (data:any) => {
-      });
+    
 
   }
 
 }
+
+
+// this.httpClient.post(`http://127.0.0.1:8000/api_new/portal_category/`,
+//     this.employeeForm.value).subscribe(
+//       (data:any) => {
+//       });
