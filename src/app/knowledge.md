@@ -5,12 +5,12 @@
 Two types of forms are there:- 
 '''
 
-###Template driven form and Reactive forms(or Model driven forms)
-##Template driven form:-
+### Template driven form and Reactive forms(or Model driven forms)
+## Template driven form:-
 This is the simplest type of form.If the form is small and its not so much complecated then you can use this form.
 In this type everything is done in html side only.
 
-##Reactive forms:-
+## Reactive forms:-
 If the form size is big then we can use reactive forms.
 We can handle the validations at runtime also.
 >So for better practice use Reactive forms.
