@@ -33,6 +33,31 @@ export class CreateEmployeeComponent implements OnInit {
 
   }
 
+
+// onLoadDataClick(): void {
+//   this.employeeForm.setValue({
+//     name: 'Pragim Technologies',
+//     email: 'pragim@pragimtech.com',
+//     skills: {
+//       skillName: 'C#',
+//       experienceInYears: 5,
+//       proficiency: 'beginner'
+//     }
+//   });
+
+  onLoadDataClick(): void {
+    this.employeeForm.patchValue({
+      name: 'Pragim Technologies',
+      email: 'pragim@pragimtech.com',
+      // skills: {
+      //   skillName: 'C#',
+      //   experienceInYears: 5,
+      //   proficiency: 'beginner'
+      // }
+    });
+}
+
+
 }
 
 
