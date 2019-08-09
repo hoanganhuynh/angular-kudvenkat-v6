@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
 
@@ -11,16 +11,30 @@ import { HttpClient } from '@angular/common/http';
 export class CreateEmployeeComponent implements OnInit {
   employeeForm: FormGroup;
   postData:any;
-  constructor(private httpClient:HttpClient) { }
+  // constructor(private httpClient:HttpClient) { }
+  constructor(private fb:FormBuilder) { }
+
+  // ngOnInit() {
+  //   this.employeeForm = new FormGroup({
+  //     name:new FormControl(),
+  //     email:new FormControl(),
+  //     skills: new FormGroup({
+  //     skillName: new FormControl(),
+  //     experienceInYears: new FormControl(),
+  //     proficiency: new FormControl()
+  //     })
+     
+  //   });
+  // }
 
   ngOnInit() {
-    this.employeeForm = new FormGroup({
-      name:new FormControl(),
-      email:new FormControl(),
-      skills: new FormGroup({
-      skillName: new FormControl(),
-      experienceInYears: new FormControl(),
-      proficiency: new FormControl()
+    this.employeeForm = this.fb.group({
+      name:['',Validators.required,Validators.minLength(2),Validators.maxLength(10)],
+      email:[''],
+      skills: this.fb.group({
+      skillName: [''],
+      experienceInYears: [''],
+      proficiency: ['']
       })
      
     });
